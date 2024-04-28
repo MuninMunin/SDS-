@@ -1,0 +1,137 @@
+/* Google Fonts - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+}
+
+body {
+    background-color: #f7f9fb;
+}
+
+#content_container {
+    background-color: #007bff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#form_container {
+    background-color: #ffffff;
+    width: 450px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+#form_header_container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#form_header {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333333;
+}
+
+#form_content_container {
+    text-align: center;
+}
+
+#form_content_inner_container {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #918f8f;
+    text-align: left; /* Align label text to the left */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 25px;
+    border: 1px solid #e6e6e6;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#logbtn {
+    margin-top: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+#googlebtn {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+button#loginbtn{
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+button#googlebtn {
+    background-color: #ffffff;
+    color: #007bff;
+    border: 1px solid #007bff;
+}
+
+button {
+    width: 100%;
+    padding: 10px 0;
+    margin-bottom: 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+
+
+button:last-child {
+    margin-top: 0px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.button-link {
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+.button-link-a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.button-link a:hover {
+    text-decoration: underline;
+}
+
+.required::after {
+    content: '*';
+    color: red;
+    margin-left: 3px;
+}
+
+
+
+
