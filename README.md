@@ -19,6 +19,10 @@ The project focuses on task management, offering users an improved solution for 
             - View assigned Project and Tasks.
             - Update task status (Mark task done).
 
+![Image](Picture/aaa.png)
+![Image](Picture/bbb.png)
+
+## This is aiming to achive a secure system base on the four concepts in system design security.
 
 ## Authentication
 - Firebase support various provider authentication methods such as email/password, phone number, and OAuth providers like Google, Facebook, and Twitter. By depending on third party it is more reliable to enssure a security layer for users. 
@@ -37,11 +41,42 @@ The project focuses on task management, offering users an improved solution for 
 - Regularly audit and monitor data access and modification logs to detect any suspicious activities that may compromise data integrity.
 
 
-## Non-repudiation:
+## Non-repudiation
 - Leverage Firebase Authentication's built-in features for logging user authentication events and actions. This creates an audit trail that can be used to trace back user activities and verify their actions.
 - Implement transaction logs or event sourcing mechanisms to record all significant transactions or changes within your application.
 - Utilize digital signatures or timestamping services to ensure the authenticity and integrity of important documents or transactions, providing evidence that can be used to verify the origin and validity of data or actions.
 - Educate users about their responsibilities and actions within the application, emphasizing the importance of maintaining the confidentiality and integrity of their credentials and data.
 
-![Image](Picture/aaa.png)
-![Image](Picture/bbb.png)
+
+
+
+## Implementation
+1. **Form Validation**
+   This is to deal with frontend, user only interact with client-side however we don't know what user will input in the form there for it is crucial to implement various form validation logic into the system. The form validation follow the rule such as:
+- `Email validation` : follow the standard email format.
+- `Username validation` :
+     ```
+      -check empty field.
+      - check username input during register acccount.
+     ```
+- `Password validate` :
+    ```
+      - check empty field.
+      - must be longer than 6.
+      - must contains at least one upper case.
+      - must contains at least one special character.
+      - only accept english upper and lower alphabet with numbers and special character.
+    ```
+
+2. **User Registration**
+```
+- Request user to input password twice if two input doesn't match, the process will be interupt by requesting input the same password.
+- User's password will be hash with strong algorithm.
+```
+
+3. **User Login**
+```
+- Login with email and password.
+- Login with google. (federate authentication)
+- User can reset when forget password, and the reset link will be sent via email.
+```
