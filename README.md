@@ -90,7 +90,7 @@ Let's demostrate see how it handle various input error.
 2. **Registration Input validation**
 When creating account it goes check up all the condition, it proceed suceeed only when match with the requirement. "
  - `giving username = munin123456789101112131415`
-![Image}(Picture/username_val.png)
+![Image](Picture/username_val.png)
 
  - `giving password = munin123! (with special character)`
 ![Image](Picture/password_val.png)
