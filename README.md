@@ -92,10 +92,10 @@ When creating account it goes check up all the condition, it proceed suceeed onl
  - `giving username = munin123456789101112131415`
 ![Image}(Picture/username_val.png)
 
- - `giving password = munin123`
+ - `giving password = munin123! (with special character)`
 ![Image](Picture/password_val.png)
 
-- `giving password = munin123! (with special character)`
+- `giving password = Munin123 (without special character)`
 ![Image](Picture/password_val_1.png)
   
 - `giving password = 1234`
