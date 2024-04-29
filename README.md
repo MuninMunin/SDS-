@@ -93,13 +93,13 @@ When creating account it goes check up all the condition, it proceed suceeed onl
 ![Image}(Picture/username_val.png)
 
  - `giving password = munin123`
-![Image}(Picture/password_val.png)
+![Image](Picture/password_val.png)
 
 - `giving password = munin123! (with special character)`
-![Image}(Picture/password_val_1.png)
+![Image](Picture/password_val_1.png)
   
 - `giving password = 1234`
-![Image}(Picture/password_val_2.png)
+![Image](Picture/password_val_2.png)
 
 
    
