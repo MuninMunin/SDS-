@@ -81,3 +81,9 @@ The project focuses on task management, offering users an improved solution for 
 - Login with google. (federate authentication)
 - User can reset when forget password, and the reset link will be sent via email.
 ```
+
+## Testing
+Let's demostrate see how it handle various input error.
+1. **Email Validation**
+   When User doesn't input a correct email format it will popup on the interface "Please enter a valid email adress."
+   ![Image](Picture/email_val.png)
