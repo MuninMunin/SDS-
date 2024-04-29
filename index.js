@@ -18,7 +18,7 @@ function validateEmail(email) {
 }
 
 function validateUsername(username) {
-  const usernameRegex = /^[a-zA-Z0-9]+$/;
+  const usernameRegex = /^[a-zA-Z0-9]{1,10}$/;
   return usernameRegex.test(username);
 }
 
@@ -27,8 +27,8 @@ function validateField(field) {
 }
 
 function validatePassword(password) {
-  if (password.length < 6) {
-      alert('Password must be at least 6 characters long.');
+  if ((password.length < 8) || (password.length > 32))  {
+      alert('Password must be at least 8 characters long and no more than 32 character.');
       return false;
   }
 
@@ -72,7 +72,7 @@ function register() {
 }
 
   if (!validateUsername(username)) {
-    alert('Username can only contain alphabets and numbers.');
+    alert('Username can only contain 10 characters including alphabets and numbers.');
     return;
   }
 
@@ -114,7 +114,7 @@ function login() {
   const password = document.getElementById('password').value;
 
   if (!validateField(email)) {
-    alert('Please enter a username.');
+    alert('Please enter an email address.');
     return;
   }
 
