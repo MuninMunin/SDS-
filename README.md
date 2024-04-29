@@ -56,13 +56,14 @@ The project focuses on task management, offering users an improved solution for 
 - `Email validation` : follow the standard email format.
 - `Username validation` :
      ```
-      -check empty field.
+      - check empty field.
+      - username must not over 10 character.
       - check username input during register acccount.
      ```
 - `Password validate` :
     ```
       - check empty field.
-      - must be longer than 6.
+      - must be longer than 8 and no more than 32.
       - must contains at least one upper case.
       - must contains at least one special character.
       - only accept english upper and lower alphabet with numbers and special character.
