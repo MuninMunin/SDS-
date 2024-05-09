@@ -62,8 +62,8 @@ Non-repudiation prevents parties from denying their actions or transactions. By 
 - Leverage Firebase Authentication's built-in features for logging user authentication events and actions. This creates an audit trail that can be used to trace back user activities and verify their actions.
 - Implement transaction logs or event sourcing mechanisms to record all significant transactions or changes within your application.
 - Utilize digital signatures or timestamping services to ensure the authenticity and integrity of important documents or transactions, providing evidence that can be used to verify the origin and validity of data or actions.
--
 
+## Implementation
 ![Image](Picture/aaa.png)
 ![Image](Picture/bbb.png)
 
