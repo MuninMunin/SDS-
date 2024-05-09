@@ -7,7 +7,7 @@ The project focuses on task management, offering users an improved solution for 
 1. **Admin ( of the System)**
     - Has the highest privileges monitoring the system.
 2. **User**
-    - Every user are promoted to be admin by default when they register account, and there privileges only to manage their projects that are created by them such as `assign tasks to other user` and `monitor on their project`.
+    - Every user are promoted to be admin by default when they register account (Note that admin here is not admin of the system). There privileges only cam manage their own account and other actions under their account. They can manage their projects that are created by them such as `assign tasks to other user` and `monitor on their project`.
         - **Functions**
             - Input Project names.
             - Input tasks.
