@@ -1,28 +1,51 @@
 # SDS-TaskManagement
 
 ## Introduction
-The project focuses on task management, offering users an improved solution for managing tasks with effective functions. With more visibility of the teamwork environment, the system allows users to work and communicate confidentially within the association. However, a system is not only about functionalities therefore Implement security into the system's design from the beginning is significant. 
+
+The project focuses on task management, offering users an improved solution for managing tasks with effective functions. With more visibility of the teamwork environment, the system allows users to work and communicate confidentially within the association. However, a system is not only about functionalities therefore Implement security into the system's design from the beginning is significant.
 
 ## Defining User
+
 1. **Admin ( of the System)**
     - Has the highest privileges monitoring the system.
 2. **User**
     - Every user are promoted to be admin by default when they register account (Note that admin here is not admin of the system). There privileges only cam manage their own account and other actions under their account. They can manage their projects that are created by them such as `assign tasks to other user` and `monitor on their project`.
-    
     - Based on that and to understand more about the system, we can seperate user account into two group seperately.
-          - They are **Leader**(if the account has created the own projects).
-          - They are **Member**(if the account is added to project and assigned task to them).
-      
-        - **Functions**
-            - Input Project names.
-            - Input tasks.
-            - Input deadline.
-            - Input Status.
-            - Assign task owner.
+        - They are **Leader**(if the account has created the own projects).
+        - They are **Member**(if the account is added to project and assigned task to them).
+        
+    - **Functions (Leader)**
+        - Input Project names.
+        - Input tasks.
+        - Input deadline.
+        - Input Status.
+        - Assign task owner.
+        
     - User that are invited to project created by other user, can only manage on tasks that are assigned to them.
-        - **Functions**
-            - View assigned Project and Tasks.
-            - Update task status (Mark task done).
+    - **Functions (Member)**
+        - View assigned Project and Tasks.
+        - Update task status (Mark task done).
+
+## Authentication
+
+Authentication plays a crucial role in ensuring the security and privacy of the user data. It is like a first security layer to prevent user from any change in actions to the data. This involves verifying the identity of users or systems accessing your application. Strong authentication mechanisms, such as multi-factor authentication (MFA) or biometric authentication, can help prevent unauthorized access. **Firebase** support various provider authentication methods such as email/password, phone number, and OAuth providers like Google, Facebook, and Twitter. By depending on third party it is more reliable to enssure a security layer for users.
+
+In this application there are two type of authentication with google firebase. which are: `(username/password)` and `Federate Authentication (oAuth)`.
+
+## Availability
+
+Availability ensures that your web application remains accessible and operational for legitimate users, even in the face of various challenges such as distributed denial-of-service (DDoS) attacks or hardware failures. This might involve implementing redundancy and failover mechanisms to maintain service continuity.
+
+To ensure the availability we consider of implementing redundancy by duplicating critical components such as database, sever to automatically switch to backup systems if primary systems fail. Redundancy ensures that there are backup resources available to maintain service continuity.
+
+Since the application is built with firebase hence, the availability also handle by google provider.
+
+## Confidentiality
+
+Confidentiality refers to protecting sensitive data from unauthorized access or disclosure. This can be achieved through encryption techniques, access controls, and secure data storage practices. 
+
+- **Password Hashing** to ensure the confidentiality. Since it is one way encrypt, when login, only need to compare input password(hashed) with the hash password store in database so no one know what are the passwords and no plain text password will be stored in database as well.
+- **Encrypt sensitive user data** both in transit and at rest. Firebase provides TLS encryption for data in transit, Hence we can use Firebase Security Rules to restrict access to sensitive data stored in Firestore, Realtime Database, or Firebase Storage.
 
 ![Image](Picture/aaa.png)
 ![Image](Picture/bbb.png)
