@@ -133,7 +133,8 @@ Non-repudiation prevents parties from denying their actions or transactions. By 
   ![Image](Picture/password_val_2.png)
 
   
-
+# Access Control
+  ![Image](Picture/level_access.png)
 
 
 
