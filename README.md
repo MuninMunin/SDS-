@@ -46,8 +46,23 @@ Since the application is built with firebase hence, the availability also handle
 
 Confidentiality refers to protecting sensitive data from unauthorized access or disclosure. This can be achieved through encryption techniques, access controls, and secure data storage practices. 
 
-- **Password Hashing** to ensure the confidentiality. Since it is one way encrypt, when login, only need to compare input password(hashed) with the hash password store in database so no one know what are the passwords and no plain text password will be stored in database as well.
 - **Encrypt sensitive user data** both in transit and at rest. Firebase provides TLS encryption for data in transit, Hence we can use Firebase Security Rules to restrict access to sensitive data stored in Firestore, Realtime Database, or Firebase Storage.
+
+## Integrity
+
+Integrity ensures that data remains accurate and unaltered during storage, transmission, and processing. Techniques like cryptographic hashing and digital signatures can help verify the integrity of data and detect any unauthorized modifications.
+
+- Firebase provide strong hash algorithm in defult, before the passwords are stored in Firebase Authentication. This ensures that passwords are securely hashed and cannot be easily reversed.
+- Firebase Security Rules enforce data validation and integrity constraints within your Firestore or Realtime Database, preventing unauthorized modifications or deletions.
+
+## Non-Repudiation
+
+Non-repudiation prevents parties from denying their actions or transactions. By implementing measures such as digital signatures and audit trails, you can establish accountability and ensure that users cannot deny their involvement in certain activities.
+
+- Leverage Firebase Authentication's built-in features for logging user authentication events and actions. This creates an audit trail that can be used to trace back user activities and verify their actions.
+- Implement transaction logs or event sourcing mechanisms to record all significant transactions or changes within your application.
+- Utilize digital signatures or timestamping services to ensure the authenticity and integrity of important documents or transactions, providing evidence that can be used to verify the origin and validity of data or actions.
+-
 
 ![Image](Picture/aaa.png)
 ![Image](Picture/bbb.png)
