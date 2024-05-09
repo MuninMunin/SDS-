@@ -64,8 +64,8 @@ Non-repudiation prevents parties from denying their actions or transactions. By 
 - Utilize digital signatures or timestamping services to ensure the authenticity and integrity of important documents or transactions, providing evidence that can be used to verify the origin and validity of data or actions.
 
 ## Implementation
-![Image](Picture/aaa.png)
-![Image](Picture/bbb.png)
+![Image](Picture/aaaa.png)
+![Image](Picture/bbbb.png)
 
 ## This is aiming to achive a secure system base on the four concepts in system design security.
 
