@@ -1,6 +1,6 @@
 # SDS-TaskManagement
 
-## Introduction
+# Introduction
 
 The project focuses on task management, offering users an improved solution for managing tasks with effective functions. With more visibility of the teamwork environment, the system allows users to work and communicate confidentially within the association. However, a system is not only about functionalities therefore Implement security into the system's design from the beginning is significant.
 
@@ -63,20 +63,50 @@ Non-repudiation prevents parties from denying their actions or transactions. By 
 - Implement transaction logs or event sourcing mechanisms to record all significant transactions or changes within your application.
 - Utilize digital signatures or timestamping services to ensure the authenticity and integrity of important documents or transactions, providing evidence that can be used to verify the origin and validity of data or actions.
 
-## Implementation
-**Authentication Flow:**  m
+
+
+
+# Implementation
+## Authentication Flow:
+1. **Register:**
+    - User input necessary information that needed in the form.
+    - Each input form will go through form validation to boost user’s security like password is required in a specific length. Also prevent from SQL injection. The validation for each input will be detailed below.
+    - Request user to input password twice if two input doesn't match, the process will be interupt by requesting input the same password.
+    - Password will be hashed with salting with strong algorithm and store securely in database.
+    - Click `Create Account` button then it will be stored in database.
+    - When account is created a `userID` for the account will be generated as primary key in database.
+    - Or User can just click `Continue with google` to sign in using gmail.
+
+      
+2. **Login:**
+    - User inout necessary information.
+    - Form validation.
+    - Hash input password and compare with database
+    - Process success if it isn’t interrupt by any errors.
+    - Or if user forget their password they can reset their pasword via `Forget password` button. Then a mail will sent to their gmail and then follow through the process listed in mail. 
 ![Image](Picture/aaaa.png)
 ![Image](Picture/bbbb.png)
 
 1. **Form Validation**
    This is to deal with frontend, user only interact with client-side however we don't know what user will input in the form there for it is crucial to implement various form validation logic into the system. The form validation follow the rule such as:
-- `Email validation` : follow the standard email format.
-- `Username validation` :
+- **`Email validation`** : follow the standard email format.
+
+  When User doesn't input a correct email format it will popup on the interface "Please enter a valid email adress."
+   ![Image](Picture/email_val.png)
+  
+- **`Username validation`** :
      ```
       - check empty field.
       - username must not over 10 character.
       - check username input during register acccount.
      ```
+     When creating account it goes check up all the condition, it proceed suceeed only when match with the requirement. "
+
+  ```
+  giving username = munin123456789101112131415
+  ```
+    ![Image](Picture/username_val.png)
+
 - `Password validate` :
     ```
       - check empty field.
@@ -85,38 +115,26 @@ Non-repudiation prevents parties from denying their actions or transactions. By 
       - must contains at least one special character.
       - only accept english upper and lower alphabet with numbers and special character.
     ```
+    
+   ```
+  giving password = munin123! (with special character)
+   ```
+   ![Image](Picture/password_val.png)
 
-2. **User Registration**
-```
-- Request user to input password twice if two input doesn't match, the process will be interupt by requesting input the same password.
-- User's password will be hash with strong algorithm.
-```
+  ```
+  giving password = Munin123 (without special character)
+  ```
+  ![Image](Picture/password_val_1.png)
 
-3. **User Login**
-```
-- Login with email and password.
-- Login with google. (federate authentication)
-- User can reset when forget password, and the reset link will be sent via email.
-```
-
-## Testing
-Let's demostrate see how it handle various input error.
-1. **Email Validation**
-   When User doesn't input a correct email format it will popup on the interface "Please enter a valid email adress."
-   ![Image](Picture/email_val.png)
-2. **Registration Input validation**
-When creating account it goes check up all the condition, it proceed suceeed only when match with the requirement. "
- - `giving username = munin123456789101112131415`
-![Image](Picture/username_val.png)
-
- - `giving password = munin123! (with special character)`
-![Image](Picture/password_val.png)
-
-- `giving password = Munin123 (without special character)`
-![Image](Picture/password_val_1.png)
   
-- `giving password = 1234`
-![Image](Picture/password_val_2.png)
+  ```
+  giving password = 1234
+  ```
+  ![Image](Picture/password_val_2.png)
+
+  
+
+
 
 
    
