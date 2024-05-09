@@ -28,7 +28,9 @@ The project focuses on task management, offering users an improved solution for 
 
 ## Authentication
 
-Authentication plays a crucial role in ensuring the security and privacy of the user data. It is like a first security layer to prevent user from any change in actions to the data. This involves verifying the identity of users or systems accessing your application. Strong authentication mechanisms, such as multi-factor authentication (MFA) or biometric authentication, can help prevent unauthorized access. **Firebase** support various provider authentication methods such as email/password, phone number, and OAuth providers like Google, Facebook, and Twitter. By depending on third party it is more reliable to enssure a security layer for users.
+Authentication plays a crucial role in ensuring the security and privacy of the user data. It is like a first security layer to prevent user from any change in actions to the data. This involves verifying the identity of users or systems accessing your application. Strong authentication mechanisms, such as multi-factor authentication (MFA) or biometric authentication, can help prevent unauthorized access. 
+
+**Firebase** support various provider authentication methods such as email/password, phone number, and OAuth providers like Google, Facebook, and Twitter. By depending on third party it is more reliable to enssure a security layer for users.
 
 In this application there are two type of authentication with google firebase. which are: `(username/password)` and `Federate Authentication (oAuth)`.
 
