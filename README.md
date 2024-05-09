@@ -9,7 +9,9 @@ The project focuses on task management, offering users an improved solution for 
 2. **User**
     - Every user are promoted to be admin by default when they register account (Note that admin here is not admin of the system). There privileges only cam manage their own account and other actions under their account. They can manage their projects that are created by them such as `assign tasks to other user` and `monitor on their project`.
     
-    - Based on that and to understand more about the system, we can seperate user account into two group seperately They are **Leader**(if the account has created the own projects). They are **Member**(if the account is added to project and assigned task to them).
+    - Based on that and to understand more about the system, we can seperate user account into two group seperately.
+          - They are **Leader**(if the account has created the own projects).
+          - They are **Member**(if the account is added to project and assigned task to them).
       
         - **Functions**
             - Input Project names.
