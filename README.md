@@ -87,7 +87,7 @@ Non-repudiation prevents parties from denying their actions or transactions. By 
 ![Image](Picture/aaaa.png)
 ![Image](Picture/bbbb.png)
 
-1. **Form Validation**
+3. **Form Validation**
    This is to deal with frontend, user only interact with client-side however we don't know what user will input in the form there for it is crucial to implement various form validation logic into the system. The form validation follow the rule such as:
 - **`Email validation`** : follow the standard email format.
 
@@ -131,6 +131,17 @@ Non-repudiation prevents parties from denying their actions or transactions. By 
   giving password = 1234
   ```
   ![Image](Picture/password_val_2.png)
+
+
+4. **Login Test**
+   Try to input information following the validation:
+   <img width="775" alt="Screenshot 2024-05-17 at 8 51 39 in the morning" src="https://github.com/MuninMunin/SDS-/assets/151008791/e9509fce-3f1c-49fc-afa5-7e9830136e4c">
+
+   As the result:
+   <img width="914" alt="Screenshot 2024-05-17 at 8 51 27 in the morning" src="https://github.com/MuninMunin/SDS-/assets/151008791/855c98a5-e0a7-482a-b12a-bb155bfe644c">
+
+   Here as admin can see new user is created:
+   <img width="1068" alt="Screenshot 2024-05-17 at 9 02 27 in the morning" src="https://github.com/MuninMunin/SDS-/assets/151008791/bde0d0b7-3098-4bfe-a223-3e2a63bc715f">
 
   
 # Access Control
